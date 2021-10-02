@@ -129,7 +129,7 @@
     $('#ldl').html(p.ldl);
     $('#hdl').html(p.hdl);
 
-    $('letterText').html(letterText);
+
   };
 
 })(window);
