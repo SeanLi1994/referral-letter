@@ -116,6 +116,7 @@
   
   function save(){
     var letterText = document.getElementById("letterText").value;
+    alert(letterText)
   }
 
   window.drawVisualization = function(p) {
