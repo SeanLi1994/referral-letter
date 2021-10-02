@@ -1,29 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link rel='stylesheet' type='text/css' href='./src/css/example-smart-app.css'>
-    <!--
-      Temporarily disable cerner-smart-embeddable-lib
-      <link rel='stylesheet' type='text/css' href='./lib/css/cerner-smart-embeddable-lib-1.0.0.min.css'>
-    -->
-    <title>Example-SMART-App</title>
-  </head>
-  <body>
-    <!-- Required JS files to enable this page to embed within an MPage -->
-    <!--
-      Temporarily disable cerner-smart-embeddable-lib
-      <script src='https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.26.0/polyfill.min.js'></script>
-      <script src='./lib/js/cerner-smart-embeddable-lib-1.0.0.min.js'></script>
-    -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Referral Letter</title>
+    <link rel='stylesheet' type='text/css' href='./assets/css/example-smart-app.css'>
 
-    <!-- FHIR Client JS Library -->
-    <script src='./lib/js/fhir-client-v0.1.12.js'></script>
+</head>
+<body>
+    <script src='./assets/lib/js/fhir-client-v0.1.12.js'></script>
 
     <!-- Prevent session bleed caused by single threaded embedded browser and sessionStorage API -->
     <!-- https://github.com/cerner/fhir-client-cerner-additions -->
-    <script src='./lib/js/fhir-client-cerner-additions-1.0.0.js'></script>
+    <script src='./assets/lib/js/fhir-client-cerner-additions-1.0.0.js'></script>
     <script>
       FHIR.oauth2.authorize({
         'client_id': '6a4175d7-6c55-48d5-ba35-879a9193c196',
@@ -35,5 +25,5 @@
       <div class="bounce2"></div>
       <div class="bounce3"></div>
     </div>
-  </body>
+</body>
 </html>
