@@ -113,6 +113,10 @@
       return undefined;
     }
   }
+  
+  function save(){
+    var letterText = document.getElementById("letterText").value;
+  }
 
   window.drawVisualization = function(p) {
     $('#holder').show();
@@ -126,6 +130,8 @@
     $('#diastolicbp').html(p.diastolicbp);
     $('#ldl').html(p.ldl);
     $('#hdl').html(p.hdl);
+
+    $('letterText').html(letterText);
   };
 
 })(window);
