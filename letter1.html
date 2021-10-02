@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Preview</title>
-    <link rel='stylesheet' type='text/css' href='./assets/css/cerner.css'>
+    <link rel='stylesheet' type='text/css' href='./assets/css/style.css'>
 </head>
 <body>
     <div id='errors'>
@@ -15,52 +15,39 @@
         <div class="bounce2"></div>
         <div class="bounce3"></div>
     </div>
-    <div id='holder'>       
-        <h2>Patient Resource</h2>
-        <table>
-        <tr>
-            <th>First Name:</th>
-            <td id='fname'></td>
-        </tr>
-        <tr>
-            <th>Last Name:</th>
-            <td id='lname'></td>
-        </tr>
-        <tr>
-            <th>Gender:</th>
-            <td id='gender'></td>
-        </tr>
-        <tr>
-            <th>Date of Birth:</th>
-            <td id='birthdate'></td>
-        </tr>
-        </table>
-        <hr>
+    <div id='holder'>
+        <div id='header'>
+            <div id='header_left'>
+                <h2>Walking Clinic</h2>
+            </div>
+            <div id='header_right'>
+                <h2>Patient Resource</h2>
+                <div>General Adult</div>
+                <div>
+                    <table>
+                    <tr>
+                        <th>First Name:</th>
+                        <td id='fname'></td>
+                    </tr>
+                    <tr>
+                        <th>Last Name:</th>
+                        <td id='lname'></td>
+                    </tr>
+                    <tr>
+                        <th>Gender:</th>
+                        <td id='gender'></td>
+                    </tr>
+                    <tr>
+                        <th>Date of Birth:</th>
+                        <td id='birthdate'></td>
+                    </tr>
+                    </table>
+                </div>
+            </div>
 
-        <h2>Referral Letter Options</h2>
-        <h2>Observation Resource</h2>
-        <table>
-        <tr>
-            <th>Height:</th>
-            <td id='height'></td>
-        </tr>
-        <tr>
-            <th>Systolic Blood Pressure:</th>
-            <td id='systolicbp'></td>
-        </tr>
-        <tr>
-            <th>Diastolic Blood Pressure:</th>
-            <td id='diastolicbp'></td>
-        </tr>
-        <tr>
-            <th>LDL:</th>
-            <td id='ldl'></td>
-        </tr>
-        <tr>
-            <th>HDL:</th>
-            <td id='hdl'></td>
-        </tr>
-        </table>
+            <hr>
+        </div>
+
     </div>
 
     <script src='./assets/js/cerner.js'></script>
