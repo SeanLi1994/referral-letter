@@ -114,10 +114,7 @@
     }
   }
   
-  function save(){
-    var letterText = document.getElementById("letterText").value;
-    return letterText;
-  }
+
 
   window.drawVisualization = function(p) {
     $('#holder').show();
