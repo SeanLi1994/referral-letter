@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preview</title>
+    <link rel='stylesheet' type='text/css' href='./assets/css/style.css'>
+</head>
+<body>
+    <div id='errors'>
+    </div>
+    <div id="loading" class="spinner">
+        <div class="bounce1"></div>
+        <div class="bounce2"></div>
+        <div class="bounce3"></div>
+    </div>
+    <div id='holder'>
+        <div id='header'>
+            <div id='header_left'>
+                <h2>Walking Clinic</h2>
+            </div>
+            <div id='header_right'>
+                <h2>Patient Resource</h2>
+                <div>General Adult</div>
+                <div>
+                    <table>
+                    <tr>
+                        <th>First Name:</th>
+                        <td id='fname'></td>
+                    </tr>
+                    <tr>
+                        <th>Last Name:</th>
+                        <td id='lname'></td>
+                    </tr>
+                    <tr>
+                        <th>Gender:</th>
+                        <td id='gender'></td>
+                    </tr>
+                    <tr>
+                        <th>Date of Birth:</th>
+                        <td id='birthdate'></td>
+                    </tr>
+                    </table>
+                </div>
+            </div>
+
+            <hr>
+            
+        </div>
+
+    </div>
+    <!-- <span id="result-name"></span> -->
+    <script src='./assets/js/cerner.js'></script>
+
+    <script src='./assets/lib/js/fhir-client-v0.1.12.js'></script>
+    <script src='./assets/js/javascript.js'></script>
+    <script src='./assets/lib/js/fhir-client-cerner-additions-1.0.0.js'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+      extractData().then(
+        function(p) {
+          drawVisualization(p);
+        },
+
+        function() {
+          $('#loading').hide();
+          $('#errors').html('<p> Failed to call FHIR Service </p>');
+        }
+      );
+    </script>
+</body>
+</html>
