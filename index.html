@@ -59,10 +59,6 @@
               <label for="inputZip" class="form-label">Zip</label>
               <input type="text" class="form-control" id="inputZip">
             </div>
-
-            <!-- <div class="col-12">
-              <button type="submit" class="btn btn-primary">Sign in</button>
-            </div> -->
           </form>
       
           <hr class="col-3 col-md-2 mb-5">
@@ -153,33 +149,19 @@
           <div class="row g-5">
             <div class="col-md-8">
               <h2>Form Options:</h2>
-
-              <!-- <form action="letter1.html" method="GET"> -->
               <form id="loginform" method="GET">
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
+                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
                   <label class="form-check-label" for="exampleRadios1">
-                    Default radio
+                    Text-only Letter
                   </label>
                 </div>
                 <div class="form-check">
                   <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2"> 
                   <label class="form-check-label" for="exampleRadios2">
-                    Second default radio
+                    Structured Letter
                   </label>
                 </div>
-                <!-- <div class="form-check">
-                  <input class="form-check-input" type="radio" name="flexRadioDefault" value="form1" id="flexRadioDefault1">
-                  <label class="form-check-label" for="flexRadioDefault1">
-                    FORM 1
-                  </label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="flexRadioDefault" value="form2" id="flexRadioDefault2">
-                  <label class="form-check-label" for="flexRadioDefault2">
-                    FORM 2
-                  </label>
-                </div> -->
                 <hr class="col-3 col-md-2 mb-5">
 
 
@@ -231,18 +213,27 @@
         }
       );
     </script> -->
-    <script>
+    <script type="text/javascript">
       var formType = $("input[name='exampleRadios']:checked").val();
-      if (formType == "option1"){
-        window.open('letter1.html');
-          // loginform.action="letter1.html";
+      if (formType == "option1"){        
+        loginform.action="letter1.html";
       }
-      else if (formType == "option2"){
-          loginform.action="letter2.html";
-      }
-      else{
-          
-      }
+
+      $('input:radio[name="exampleRadios"]').change(
+      function(){
+          if ($(this).is(':checked') && $(this).val() == 'option1') {
+              loginform.action="letter1.html";
+          }
+          else if ($(this).is(':checked') && $(this).val() == 'option2') {
+              loginform.action="letter2.html";
+          }
+          else{
+              window.location = "index.html";
+          }
+      });
+
+
+      
     </script>
 </body>
 </html>

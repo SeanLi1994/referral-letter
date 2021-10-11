@@ -1,8 +1,3 @@
-// function save(){
-//     var letterText = document.getElementById("letterText").value;
-//     return letterText;
-//   }
-
 window.addEventListener('load', () => {
 
     // Via Query parameters - GET
@@ -22,24 +17,21 @@ window.addEventListener('load', () => {
 
 })
 
-// var formType = $("input[type='radio']:checked").val();
-// if (formType == "form1"){
-//     window.location.replace("/form1.html");
-// }
-// else if (formType == "form2"){
-//     window.location.replace("/form2");
-// }
-// else{
-//     layer.alert("not yet");
+
+// var formType = $("input[name='exampleRadios']:checked").val();
+// if (formType == "option1"){        
+//     loginform.action="letter1.html";
 // }
 
-// var formType = $("input[type='radio']:checked").val();
-// if (formType == "form1"){
-//     loginform.action="/letter1";
-// }
-// else if (formType == "form2"){
-//     loginform.action="/letter2";
-// }
-// else{
-//     layer.alert("not yet");
-// }
+// $('input:radio[name="exampleRadios"]').change(
+// function(){
+//     if ($(this).is(':checked') && $(this).val() == 'option1') {
+//         loginform.action="letter1.html";
+//     }
+//     else if ($(this).is(':checked') && $(this).val() == 'option2') {
+//         loginform.action="letter2.html";
+//     }
+//     else{
+//         window.location = "index.html";
+//     }
+// });
