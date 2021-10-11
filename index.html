@@ -9,188 +9,208 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 </head>
 <body>
-    <div id='errors'>
-    </div>
+    <div id='errors'></div>
     <div id="loading" class="spinner">
         <div class="bounce1"></div>
         <div class="bounce2"></div>
         <div class="bounce3"></div>
     </div>
-    <div id='holder'> 
-    <div class="col-lg-8 mx-auto bg-light">
-        <header class="d-flex align-items-center p-2 border-bottom bg-primary bg-opacity-75" >
-          <a href="/" class="d-flex align-items-center text-white text-decoration-none">
-            <span class="fs-4"><strong>Walking Clinic</strong></span>
-          </a>
-        </header>
-      
-        <main class="p-4">
-          <h2>Referral to:</h2>
-          <form class="row g-3" method="GET">
-            <div class="col-md-6">
-                <label for="inputFitstName" class="form-label">Specialist Name</label>
-                <input type="text" class="form-control" id="inputFitstName">
-            </div>
-            <div class="col-md-6">
-              <label for="inputEmail4" class="form-label">Email</label>
-              <input type="email" class="form-control" id="inputEmail4">
-            </div>
 
-            <div class="col-12">
-              <label for="inputAddress" class="form-label">Address</label>
-              <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-            </div>
-            <div class="col-12">
-              <label for="inputAddress2" class="form-label">Address 2</label>
-              <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-            </div>
-            <div class="col-md-6">
-              <label for="inputCity" class="form-label">City</label>
-              <input type="text" class="form-control" id="inputCity">
-            </div>
-            <div class="col-md-4">
-              <label for="inputState" class="form-label">State</label>
-              <select id="inputState" class="form-select">
-                <option selected>Choose...</option>
-                <option>...</option>
-              </select>
-            </div>
-            <div class="col-md-2">
-              <label for="inputZip" class="form-label">Zip</label>
-              <input type="text" class="form-control" id="inputZip">
-            </div>
-          </form>
-      
-          <hr class="col-3 col-md-2 mb-5">
-      
-          <div class="row g-5">
-            <div class="col-md-8">
-              <h2>Referral from:</h2>
-              <table class="table table-striped">
-                <tbody>
-                  <tr>
-                    <th scope="row">Name</th>
-                    <td>Mark Jacob</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Provider Number</th>
-                    <td>32123321</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Phone</th>
-                    <td>049283756</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">E-mail</th>
-                    <td>MJ@gmail.com</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Address</th>
-                    <td>123 Main Rd</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-      
-          </div>
-
-          <hr class="col-3 col-md-2 mb-5">
-      
-          <div class="row g-5">
-            <div class="col-md-8">
-              <h2>Patient Resource:</h2>
-              <table class="table table-striped">
-                <tbody>
-                  <tr>
-                    <th scope="row">First Name</th>
-                    <td id='fname'></td>
-                </tr>
-                  <tr>
-                    <th scope="row">Last Name</th>
-                    <td id='lname'></td>
-                </tr>
-                  <tr>
-                    <th scope="row">Gender</th>
-                    <td id='gender'></td>
-                </tr>
-                  <tr>
-                    <th scope="row">Date of Birth</th>
-                    <td id='birthdate'></td>
-                </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-          <h5>Patient Resource Options:</h5>
-
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-            <label class="form-check-label" for="flexCheckDefault">
-              <div class="btn-group">
-                <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
-                  Right-aligned but left aligned when large screen
-                </button>
-                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-lg-start">
-                  <li><button class="dropdown-item" type="button">Action</button></li>
-                  <li><button class="dropdown-item" type="button">Another action</button></li>
-                  <li><button class="dropdown-item" type="button">Something else here</button></li>
-                </ul>
-              </div>
-            </label>
-          </div>
+    <div id='holder'>
+        <div class="col-lg-8 mx-auto bg-light">
+            <header class="d-flex align-items-center p-2 border-bottom bg-primary bg-opacity-75" >
+                <a href="/" class="d-flex align-items-center text-white text-decoration-none">
+                    <span class="fs-4"><strong>Walking Clinic</strong></span>
+                </a>
+            </header>
+            <main class="p-3">
+                <form id="loginform" method="GET">
+                    <div class="card my-3 p-3 bg-body rounded shadow-sm">
+                        <h2>Referral to:</h2>
+                        <!-- <form class="row g-3" method="GET"> -->
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="inputFitstName" class="form-label">Specialist Name</label>
+                                    <input type="text" class="form-control" id="inputFitstName">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="inputEmail4" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="inputEmail4">
+                                </div>
+                                <div class="col-12">
+                                    <label for="inputAddress" class="form-label">Address</label>
+                                    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                                </div>
+                                <div class="col-12">
+                                    <label for="inputAddress2" class="form-label">Address 2</label>
+                                    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="inputCity" class="form-label">City</label>
+                                    <input type="text" class="form-control" id="inputCity">
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="inputState" class="form-label">State</label>
+                                    <select id="inputState" class="form-select">
+                                        <option selected>Choose...</option>
+                                        <option>...</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-2">
+                                    <label for="inputZip" class="form-label">Zip</label>
+                                    <input type="text" class="form-control" id="inputZip" name="zip">
+                                </div>
+                            </div>
+                        <!-- </form> -->
+                    </div>
+                    
+                    <!-- <hr class="col-3 col-md-2 mb-5"> -->
+                    <div class="card my-3 p-3 bg-body rounded shadow-sm">
+                        <div class="row g-5">
+                            <div class="col-md-8">
+                                <h2>Referral from:</h2>
+                                <table class="table table-striped">
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">Name</th>
+                                            <td>Mark Jacob</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Provider Number</th>
+                                            <td>32123321</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Phone</th>
+                                            <td>049283756</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">E-mail</th>
+                                            <td>MJ@gmail.com</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Address</th>
+                                            <td>123 Main Rd</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
 
 
+                    <div class="card my-3 p-3 bg-body rounded shadow-sm">
+                        <div class="row g-5">
+                            <div class="col-md-8">
+                                <h2>Patient Resource:</h2>
+                                <table class="table table-striped">
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">First Name</th>
+                                            <td id='fname'></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Last Name</th>
+                                            <td id='lname'></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Gender</th>
+                                            <td id='gender'></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Date of Birth</th>
+                                            <td id='birthdate'></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
 
+                            <h5><strong>Patient Resource Options:</strong></h5>
+                            <div class="d-grid gap-2 col-8 my-3">
+                                <div class="d-flex bd-highlight bg-secondary rounded">
+                                    <div class="px-2 pt-2 bd-highlight">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckDefault"></label>
+                                        </div>
+                                    </div>
+                                    <div class="flex-grow-1 bd-highlight">
+                                        <div class="d-grid col-12">
+                                            <button type="button" class="btn btn-secondary text-start" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample1" aria-expanded="false" aria-controls="multiCollapseExample1">Adverse Reactions Options</button>
+                                        </div>
+                                    </div>
+                                    <div class="bd-highlight">
+                                        <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false"></button>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="collapse multi-collapse" id="multiCollapseExample1">
+                                        <div class="card card-body">
+                                            <ul>
+                                                <li><h6>Dropdown header</h6></li>
+                                                <li><a class="text-decoration-none" href="#">Action</a></li>
+                                                <li><a href="#">Another action</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex bd-highlight bg-secondary rounded">
+                                    <div class="px-2 pt-2 bd-highlight">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckDefault"></label>
+                                        </div>
+                                    </div>
+                                    <div class="flex-grow-1 bd-highlight">
+                                        <div class="d-grid col-12">
+                                            <button type="button" class="btn btn-secondary text-start" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Pathology Test Results</button>
+                                        </div>
+                                    </div>
+                                    <div class="bd-highlight">
+                                        <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false"></button>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="collapse multi-collapse" id="multiCollapseExample2">
+                                        <div class="card card-body">
+                                            2
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-      
-          
-          
-          <hr class="col-3 col-md-2 mb-5">
-          <div class="row g-5">
-            <div class="col-md-8">
-              <h2>Form Options:</h2>
-              <form id="loginform" method="GET">
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-                  <label class="form-check-label" for="exampleRadios1">
-                    Text-only Letter
-                  </label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2"> 
-                  <label class="form-check-label" for="exampleRadios2">
-                    Structured Letter
-                  </label>
-                </div>
-                <hr class="col-3 col-md-2 mb-5">
-
-
-
-                <h5>Text comments:</h5>
-
-                <div class="mb-3">
-                    <textarea class="form-control" type="text" name="comment" id="comment" rows="3"></textarea>
-                </div>
-                <div class="col-12 justify-content-md-end">
-                  <button type="submit" class="btn btn-primary">Submit</button>
-                </div>
-
-                <!-- <input type="submit"> -->
-
-              </form>
-            </div>
-      
-          </div>
-        </main>
-
-        <!-- <input id="letterText" placeholder="inout">
-        <br>
-        <button onclick="save()" id="btn1">save</button> -->
-        <!-- <a href="https://seanli1994.github.io/referral-letter/letter1">Letter1</a> -->
+                    <div class="card my-3 p-3 bg-body rounded shadow-sm">
+                        <div class="row g-5">
+                            <div class="col-md-8">
+                                <h2>Form Options:</h2>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                                    <label class="form-check-label" for="exampleRadios1">
+                                    Text-only Letter
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                                    <label class="form-check-label" for="exampleRadios2">
+                                    Structured Letter
+                                    </label>
+                                </div>
+                                <hr class="col-3 col-md-2 mb-5">
+                                <h5><strong>Text comments:</strong></h5>
+                                <div class="mb-3">
+                                    <textarea class="form-control" type="text" name="comment" id="comment" rows="3"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 justify-content-md-end">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
+            </main>
+        </div>
     </div>
-    </div>
-
-
     <script src='./assets/js/cerner.js'></script>
     <!-- <script src='./assets/js/javascript.js'></script> -->
 
@@ -214,26 +234,23 @@
       );
     </script> -->
     <script type="text/javascript">
-      var formType = $("input[name='exampleRadios']:checked").val();
-      if (formType == "option1"){        
+        var formType = $("input[name='exampleRadios']:checked").val();
+        if (formType == "option1"){        
         loginform.action="letter1.html";
-      }
+        }
 
-      $('input:radio[name="exampleRadios"]').change(
-      function(){
-          if ($(this).is(':checked') && $(this).val() == 'option1') {
-              loginform.action="letter1.html";
-          }
-          else if ($(this).is(':checked') && $(this).val() == 'option2') {
-              loginform.action="letter2.html";
-          }
-          else{
-              window.location = "index.html";
-          }
-      });
-
-
-      
+        $('input:radio[name="exampleRadios"]').change(
+        function(){
+            if ($(this).is(':checked') && $(this).val() == 'option1') {
+                loginform.action="letter1.html";
+            }
+            else if ($(this).is(':checked') && $(this).val() == 'option2') {
+                loginform.action="letter2.html";
+            }
+            else{
+                window.location = "index.html";
+            }
+        });
     </script>
 </body>
 </html>

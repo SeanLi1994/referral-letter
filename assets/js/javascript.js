@@ -3,7 +3,7 @@ window.addEventListener('load', () => {
     // Via Query parameters - GET
     const params = (new URL(document.location)).searchParams;
     const comment = params.get('comment');
-    // const surname = params.get('surname');
+    const zip = params.get('zip');
 
     // Via local Storage
     /* const name = localStorage.getItem('NAME');
@@ -13,7 +13,7 @@ window.addEventListener('load', () => {
     // const surname = sessionStorage.getItem('SURNAME');
     
     document.getElementById('result-comment').innerHTML = comment;
-    // document.getElementById('result-surname').innerHTML = surname;
+    document.getElementById('inputZip').innerHTML = zip;
 
 })
 
