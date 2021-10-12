@@ -1,20 +1,4 @@
-/* tr {
-    text-align: right;
-}
 
-#header_left, #header_right {
-    display: inline;
-}
-
-th, td {
-    padding: 5px;
-    text-align: left;
-    font-size: small;
-  }
-  
-  body {
-    margin: 0;
-  }
   
   #holder {
     display: none;
@@ -45,7 +29,7 @@ th, td {
   .spinner .bounce2 {
     -webkit-animation-delay: -0.16s;
     animation-delay: -0.16s;
-  } */
+  }
 
   th, td {
     text-align: left;

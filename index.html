@@ -235,6 +235,17 @@
       );
     </script> -->
     <script type="text/javascript">
+        extractData().then(
+            function(p) {
+                drawVisualization(p);
+            },
+
+            function() {
+                $('#loading').hide();
+                $('#errors').html('<p> Failed to call FHIR Service </p>');
+            }
+        );
+
         var formType = $("input[name='exampleRadios']:checked").val();
         if (formType == "option1"){        
         loginform.action="letter1.html";

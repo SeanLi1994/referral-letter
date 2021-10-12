@@ -3,7 +3,7 @@ body {
   margin: 0;
 }
 
-/* #holder {
+#holder {
   display: none;
 }
 
@@ -32,9 +32,9 @@ body {
 .spinner .bounce2 {
   -webkit-animation-delay: -0.16s;
   animation-delay: -0.16s;
-} */
+} 
 
-/* @-webkit-keyframes sk-bouncedelay {
+@-webkit-keyframes sk-bouncedelay {
   0%, 80%, 100% { -webkit-transform: scale(0) }
   40% { -webkit-transform: scale(1.0) }
 }
@@ -47,4 +47,4 @@ body {
     -webkit-transform: scale(1.0);
     transform: scale(1.0);
   }
-} */
+}
