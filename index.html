@@ -130,17 +130,17 @@
                                 <div class="d-flex bd-highlight bg-secondary rounded">
                                     <div class="px-2 pt-2 bd-highlight">
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                            <label class="form-check-label" for="flexCheckDefault"></label>
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault1" disabled>
+                                            <label class="form-check-label" for="flexCheckDefault1"></label>
                                         </div>
                                     </div>
                                     <div class="flex-grow-1 bd-highlight">
                                         <div class="d-grid">
-                                            <button type="button" class="btn btn-secondary text-start" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample1" aria-expanded="false" aria-controls="multiCollapseExample1">Adverse Reactions Options</button>
+                                            <button type="button" class="btn btn-secondary text-start" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample1" aria-expanded="false" aria-controls="multiCollapseExample1" disabled>Adverse Reactions Options (unfinished)</button>
                                         </div>
                                     </div>
                                     <div class="bd-highlight">
-                                        <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample1" aria-expanded="false" aria-controls="multiCollapseExample1"></button>
+                                        <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample1" aria-expanded="false" aria-controls="multiCollapseExample1" disabled></button>
                                     </div>
                                 </div>
                                 <div class="col">
@@ -157,8 +157,8 @@
                                 <div class="d-flex bd-highlight bg-secondary rounded">
                                     <div class="px-2 pt-2 bd-highlight">
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                            <label class="form-check-label" for="flexCheckDefault"></label>
+                                            <input class="form-check-input" type="checkbox" name="flexCheckDefault2" value="display" id="flexCheckDefault2">
+                                            <label class="form-check-label" for="flexCheckDefault2"></label>
                                         </div>
                                     </div>
                                     <div class="flex-grow-1 bd-highlight">
@@ -173,7 +173,26 @@
                                 <div class="col">
                                     <div class="collapse multi-collapse" id="multiCollapseExample2">
                                         <div class="card card-body">
-                                            2
+                                            <table class="table table-borderless table-sm">
+                                                <tbody>
+                                                    <tr>
+                                                        <td scope="row">Systolic BP:</td>
+                                                        <td id='systolicbp'></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td scope="row">Diastolic BP:</td>
+                                                        <td id='diastolicbp'></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td scope="row">Low-density lipoprotein:</td>
+                                                        <td id='ldl'></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td scope="row">High-density Lipoprotein:</td>
+                                                        <td id='hdl'></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
                                         </div>
                                     </div>
                                 </div>
@@ -213,7 +232,6 @@
         </div>
     </div>
     <script src='./assets/js/cerner.js'></script>
-    <!-- <script src='./assets/js/javascript.js'></script> -->
 
     <script src='./assets/lib/js/fhir-client-v0.1.12.js'></script>
 
@@ -222,18 +240,7 @@
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     
-    <!-- <script>
-      extractData().then(
-        function(p) {
-          drawVisualization(p);
-        },
 
-        function() {
-          $('#loading').hide();
-          $('#errors').html('<p> Failed to call FHIR Service </p>');
-        }
-      );
-    </script> -->
     <script type="text/javascript">
         extractData().then(
             function(p) {
@@ -263,6 +270,8 @@
                 window.location = "index.html";
             }
         });
+
+
     </script>
 </body>
 </html>

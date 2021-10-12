@@ -8,6 +8,7 @@ window.addEventListener('load', () => {
     const address2 = params.get('inputAddress2');
     const state = params.get('inputState');
     const zip = params.get('inputZip');
+    const clientObservation = params.get('flexCheckDefault2');
 
     // Via local Storage
     /* const name = localStorage.getItem('NAME');
@@ -26,7 +27,12 @@ window.addEventListener('load', () => {
     document.getElementById('result-state').innerHTML = state;
     document.getElementById('result-zip').innerHTML = zip;
 
-
-
+    if (clientObservation == 'display'){
+        $('.clientObservation').show();
+    }
 
 })
+
+
+
+
