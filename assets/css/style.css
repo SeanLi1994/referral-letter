@@ -46,6 +46,15 @@ th, td {
     -webkit-animation-delay: -0.16s;
     animation-delay: -0.16s;
   } */
+
+  th, td {
+    text-align: left;
+    font-size: small;
+    font-weight: normal;
+    padding: 0;
+    margin: 0;
+  }
+  
   
   @-webkit-keyframes sk-bouncedelay {
     0%, 80%, 100% { -webkit-transform: scale(0) }
