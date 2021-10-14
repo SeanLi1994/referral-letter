@@ -17,7 +17,10 @@
                       code: {
                         $or: ['http://loinc.org|8302-2', 'http://loinc.org|8462-4',
                               'http://loinc.org|8480-6', 'http://loinc.org|2085-9',
-                              'http://loinc.org|2089-1', 'http://loinc.org|55284-4']
+                              'http://loinc.org|2089-1', 'http://loinc.org|55284-4',
+                            // Total Cholesterol, Weight and Body Mass Index
+                              'http://loinc.org|2093-3', 'http://loinc.org|29463-7',
+                              'http://loinc.org|39156-5']
                       }
                     }
                   });
@@ -42,12 +45,23 @@
           var hdl = byCodes('2085-9');
           var ldl = byCodes('2089-1');
 
+          // Total Cholesterol, Weight and Body Mass Index
+          var cholesterol = byCodes('2093-3');
+          var weight = byCodes('29463-7');
+          var bmi = byCodes('39156-5');
+
           var p = defaultPatient();
           p.birthdate = patient.birthDate;
           p.gender = gender;
           p.fname = fname;
           p.lname = lname;
           p.height = getQuantityValueAndUnit(height[0]);
+
+          // Total Cholesterol, Weight and Body Mass Index
+          p.cholesterol = getQuantityValueAndUnit(cholesterol[0]);
+          p.weight = getQuantityValueAndUnit(weight[0]);
+          p.bmi = getQuantityValueAndUnit(bmi[0]);
+
 
           if (typeof systolicbp != 'undefined')  {
             p.systolicbp = systolicbp;
@@ -83,6 +97,11 @@
       diastolicbp: {value: ''},
       ldl: {value: ''},
       hdl: {value: ''},
+      // Total Cholesterol, Weight and Body Mass Index
+      cholesterol: {value: ''},
+      weight: {value: ''},
+      bmi: {value: ''},
+
     };
   }
 
@@ -128,6 +147,10 @@
     $('#diastolicbp').html(p.diastolicbp);
     $('#ldl').html(p.ldl);
     $('#hdl').html(p.hdl);
+    // Total Cholesterol, Weight and Body Mass Index
+    $('#cholesterol').html(p.hdl);
+    $('#weight').html(p.hdl);
+    $('#bmi').html(p.hdl);
 
 
   };
