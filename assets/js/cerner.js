@@ -148,9 +148,9 @@
     $('#ldl').html(p.ldl);
     $('#hdl').html(p.hdl);
     // Total Cholesterol, Weight and Body Mass Index
-    $('#cholesterol').html(p.hdl);
-    $('#weight').html(p.hdl);
-    $('#bmi').html(p.hdl);
+    $('#cholesterol').html(p.cholesterol);
+    $('#weight').html(p.weight);
+    $('#bmi').html(p.bmi);
 
 
   };
