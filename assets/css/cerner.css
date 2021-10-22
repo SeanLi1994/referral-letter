@@ -7,6 +7,12 @@ body {
   display: none;
 }
 
+.customButton {
+  width: 148px !important;
+  height: 48px !important;
+
+}
+
 .spinner {
   margin: 100px auto 0;
   width: 70px;
