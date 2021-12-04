@@ -16,18 +16,26 @@
         <div class="bounce3"></div>
     </div>
 
+    <!-- main body -->
+
     <div id='holder'>
         <div class="col-lg-8 mx-auto bg-light">
+
+    <!-- header -->
             <header class="d-flex align-items-center p-2 border-bottom bg-primary bg-opacity-75" >
                 <a href="/" class="d-flex align-items-center text-white text-decoration-none">
                     <span class="fs-4"><strong>Referral Letter</strong></span>
                 </a>
             </header>
+
             <main class="p-3">
+
+    <!-- form structure -->
                 <form id="loginform" method="GET">
                     <div class="card my-3 p-3 bg-body rounded shadow-sm">
+
+    <!-- data input field -->
                         <h2>Referral to:</h2>
-                        <!-- <form class="row g-3" method="GET"> -->
                             <div class="row g-3">
                                 <div class="col-md-6">
                                     <label for="inputSpecialistName" class="form-label">Specialist Name</label>
@@ -62,10 +70,9 @@
                                     <input type="text" class="form-control" id="inputZip" name="inputZip">
                                 </div>
                             </div>
-                        <!-- </form> -->
                     </div>
                     
-                    <!-- <hr class="col-3 col-md-2 mb-5"> -->
+    <!-- preset data field -->
                     <div class="card my-3 p-3 bg-body rounded shadow-sm">
                         <div class="row g-5">
                             <div class="col-md-8">
@@ -98,7 +105,7 @@
                         </div>
                     </div>
 
-
+    <!-- patient data extracted from FHIR Server -->
                     <div class="card my-3 p-3 bg-body rounded shadow-sm">
                         <div class="row g-5">
                             <div class="col-md-8">
@@ -125,6 +132,7 @@
                                 </table>
                             </div>
 
+    <!-- drop-down healthcare data field -->                            
                             <h5 class="pb-0 mb-0"><strong>Patient Resource Options:</strong></h5>
                             <p class="text-muted m-2">
                                 Checked resources will only be displayed in the Sturctured Letter.
@@ -203,6 +211,7 @@
                         </div>
                     </div>
 
+    <!-- letter form option field -->
                     <div class="card my-3 p-3 bg-body rounded shadow-sm">
                         <div class="row g-5">
                             <div class="col-md-8">
@@ -220,6 +229,8 @@
                                     </label>
                                 </div>
                                 <hr class="col-3 col-md-2 mb-5">
+
+    <!-- general comment input field -->
                                 <h5><strong>Text comments:</strong></h5>
                                 <div class="mb-3">
                                     <textarea class="form-control" type="text" name="inputComment" id="inputComment" style="height: 300px"></textarea>
@@ -227,6 +238,8 @@
                             </div>
                         </div>
                     </div>
+
+    <!-- submist button -->                    
                     <div class="col-12 justify-content-md-end">
                         <button type="submit" class="btn btn-primary customButton">Submit</button>
                     </div>
@@ -245,6 +258,7 @@
     
 
     <script type="text/javascript">
+        // data extraction from FHIR Server
         extractData().then(
             function(p) {
                 drawVisualization(p);
@@ -256,6 +270,7 @@
             }
         );
 
+        // form value submit destination based on corresponding letter form choices
         var formType = $("input[name='exampleRadios']:checked").val();
         if (formType == "option1"){        
         loginform.action="letter1.html";
